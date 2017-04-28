@@ -1,6 +1,6 @@
 {
   "name": "easy-assert",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Simple TypeScript/JavaScript library for asserting values - for simple test output to console.log for visual inspection.",
   "main": "lib/index.js",
   "typings": "lib/index",
