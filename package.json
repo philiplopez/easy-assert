@@ -1,0 +1,26 @@
+{
+  "name": "easy-assert",
+  "version": "0.1.0",
+  "description": "Simple TypeScript/JavaScript library for asserting values - for simple test output to console.log for visual inspection.",
+  "main": "lib/index.js",
+  "typings": "lib/index",
+  "files": [
+    "lib/"
+  ],
+  "repository": "git@github.com:philiplopez/easy-assert.git",
+  "author": "Philip Lopez <philip.lopez@philiplopez.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "npm run build && ava test",
+    "prepublishOnly": "npm run build",
+    "build": "trash lib && tsc -p tsconfig.json",
+    "preversion": "npm test",
+    "version": "npm run build && git add -A lib",
+    "postversion": "git push && git push --tags"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "trash-cli": "^1.4.0",
+    "typescript": "^2.2.2"
+  }
+}
